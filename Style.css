@@ -33,13 +33,16 @@ body{
 }
 .cards-area{
     display: flex;
-    align-items: flex-start;
+    flex-wrap: nowrap;
     overflow-x: auto;
-    height: 100%;
-    padding-top: 100px; 
-    padding-left: 10px; /* Adds a little space on the left edge */
-    padding-right: 10px;
-    box-sizing: border-box; /* Ensures padding doesn't mess up the width */
+    align-items: flex-start; 
+    padding: 10px;
+    
+    /* THE CORRECT FIX FOR THE SCROLLBAR ISSUE: */
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    box-sizing: border-box;
+
 }
 .top-navigation {
     background-color: rgba(0, 138, 251, 0.15); 
