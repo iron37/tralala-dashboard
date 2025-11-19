@@ -25,9 +25,6 @@ body{
     box-shadow: 0 1px 0 #ccc;  /* A tiny shadow to make it pop */
     cursor: pointer;           /* Changes mouse to a hand icon */
     font-size: 14px;           /* Readable text size */
-    height: calc(100vh - 80px); 
-    margin-top: 80px; 
-    box-sizing: border-box;
 }
 .card-header {
     font-weight: bold;         /* Bold text for the card header */
