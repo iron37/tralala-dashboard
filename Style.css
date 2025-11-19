@@ -38,7 +38,6 @@ body{
     align-items: flex-start; 
     padding: 10px;
     
-    /* THE CORRECT FIX FOR THE SCROLLBAR ISSUE: */
     height: calc(100vh - 80px);
     margin-top: 80px;
     box-sizing: border-box;
