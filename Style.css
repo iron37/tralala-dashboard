@@ -1,0 +1,191 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;       
+    background-attachment: fixed; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+ .list-column {
+    background-color: #ebecf0; 
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;        
+    flex-direction: column;
+    max-height: 100%;
+}
+.card-item {
+    background-color: #ffffff; /* White card */
+    padding: 10px 12px;              /* Space inside the card */
+    margin-bottom: 10px;        /* Space between cards */
+    border-radius: 4px;        /* Slightly rounded corners */
+    box-shadow: 0 1px 0 #ccc;  /* A tiny shadow to make it pop */
+    cursor: pointer;           /* Changes mouse to a hand icon */
+    font-size: 14px;           /* Readable text size */
+}
+.card-header {
+    font-weight: bold;         /* Bold text for the card header */
+    margin-bottom: 10px; /* Pushes the first card down a bit */
+    padding-left: 4px;
+}
+.cards-area{
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    height: 100%;
+    padding-top: 100px; 
+    padding-left: 10px; /* Adds a little space on the left edge */
+    padding-right: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't mess up the width */
+
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+.top-navigation {
+    background-color: rgba(0, 138, 251, 0.15); 
+    height: 40px;
+    width: 100%;        /* Stretch across the screen */
+    position: fixed;    /* THE KEY: Sticks it to the screen */
+    top: 0;             /* Sticks to the very top */
+    left: 0;
+    z-index: 100;        /* Ensures it sits ON TOP of the scrolling lists */
+    display: flex;      /* Bonus: Helps align icons inside the menu */
+    align-items: center; 
+
+    display: flex;            /* Aligns items in a row */
+    justify-content: space-between; /* Spreads them out */
+    align-items: center;      /* Centers them vertically */
+    color: white;             /* Makes text visible */
+    padding: 5px 10px;        /* Adds inner space */
+    height: 40px;             /* Forces a height */
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 4px; /* Small padding */
+    box-sizing: border-box;
+}   
+.card-item input[type="text"] {
+    width: 100%;         /* Fills the card width */
+    padding: 10px;        /* Adds inner space */
+    border: 1px solid #ccc;
+    border-radius: 3px;  /* Rounded corners */
+    box-sizing: border-box; /* Keeps it inside the borders */
+    font-size: 14px;
+    height: 60px;
+    vertical-align: top;
+}  
+.btn-green {
+    background-color: #5aac44; /* Trello Green */
+    color: white;              /* White text */
+    border: none;              /* Removes default grey border */
+    padding: 8px 15px;         /* Makes it bigger */
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;           /* Hand icon on hover */
+}
+
+.btn-green:hover {
+    background-color: #519839; /* Slightly darker green on hover */
+} 
+.card-item:last-child {
+    background-color: transparent; /* Removes the white card background */
+    color: #5e6c84;                /* Dark grey text */
+    box-shadow: none;              /* Removes the card shadow */
+    padding: 8px;
+}
+
+.card-item:last-child:hover {
+    background-color: rgba(9, 30, 66, 0.08); /* Light grey hover effect */
+    text-decoration: underline;
+    color: #172b4d;
+}
+.nav-left, .nav-right {
+    display: flex;
+    gap: 10px; /* Adds space between the icons */
+    align-items: center;
+} 
+.board-header-bar {
+    height: 40px;
+    background-color: rgba(0,0,0,0.2); /* Slightly transparent */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+.add-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between button and X */
+    margin-top: 8px;
+}
+.fa-times {
+    color: #6b778c;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: #172b4d;
+}
+
+#boards {
+    background-color: rgba(255, 255, 255, 0.3); /* Glass effect */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px; /* Space from home icon */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+#boards:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Lighter on hover */
+}
+.board-header-bar {
+    position: fixed;
+    top: 40px; /* Puts it exactly below the top nav */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.24); /* Slightly darker transparency */
+    z-index: 90;
+    display: flex;
+    justify-content: space-between; /* Title on left, Menu on right */
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.search-bar {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent glass */
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 180px; /* Adjust width as needed */
+    margin-left: 10px; /* Space from the Boards button */
+    color: white;
+    padding-left: 8px;
+}
+
+.search-bar:focus {
+    background-color: white; /* Turns white when you click it */
+    color: black;
+    outline: none;
+}
+.top-navigation .nav-left .search-bar::placeholder {
+    color: rgb(255, 255, 255); /* Light placeholder text */
+    font-weight: bold;
+}
